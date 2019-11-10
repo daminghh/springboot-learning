@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.learning'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    //添加这个配置以后，生成的jar包就是只包含自己模块里面的代码的jar包，其他模块即可引用该模块资源
+    enabled = true
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

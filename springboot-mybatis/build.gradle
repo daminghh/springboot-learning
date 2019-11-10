@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.learning'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+//作用是打一个能以java -jar就起来的内嵌tomcat项目的jar包
+bootJar {
+    enabled = true
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    //添加其他模块项目
+    compile project(":springboot-util")
+}

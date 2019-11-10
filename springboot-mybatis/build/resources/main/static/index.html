@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>spring boot</title>
+        <script language="JavaScript" src="js/jquery-1.4.2.js"></script>
+    </head>
+    <body>
+        <center>
+            <form action="/add" method="post">
+                <table>
+                    <tr>
+                        <td>编号：</td>
+                        <td><input type="text" name="id"></td>
+                    </tr>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="点击添加">
+            </form>
+        </center>
+    </body>
+    <script language="JavaScript">
+        //页面加载事件
+        $(document).ready(function(){
+            $.get("getJson", function(data){
+                // json = eval('(' + data + ')');
+                // $("#page_num").val(data);
+                // alert(data);
+            });
+        });
+    </script>
+</html>
